@@ -6,6 +6,7 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "report:mocha": "marge mochawesome-report > index.json",
     "report:clean": "rimraf mochawesome-report"
   },
   "keywords": [],
