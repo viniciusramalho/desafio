@@ -38,6 +38,9 @@ jobs:
     # instalando as dependencias
     - run: npm install
     
+    # executando teste
+    - run: npm run cy:run
+    
     # publicar relatorio em html
     - name: Deploy to GithubPages
       uses: JamesIves/github-pages-deploy-action@4.1.4
