@@ -41,6 +41,8 @@ jobs:
     # executando teste
     - run: npm run cy:run
     
+    - run: npm run report:mocha
+    
     # publicar relatorio em html
     - name: Deploy to GithubPages
       uses: JamesIves/github-pages-deploy-action@4.1.4
