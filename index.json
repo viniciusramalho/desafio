@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-02T21:36:24.690Z",
+    "end": "2021-07-02T21:36:42.627Z",
+    "duration": 17937,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8faf9686-9e46-4e79-91a2-4e968017bf64",
+      "title": "",
+      "fullFile": "cypress/integration/cadastra_usuario.spec.js",
+      "file": "cypress/integration/cadastra_usuario.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05966f89-9046-4598-8bb0-07ba6bd827a2",
+          "title": "Cadastrar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar novo usuario",
+              "fullTitle": "Cadastrar Cadastrar novo usuario",
+              "timedOut": null,
+              "duration": 17840,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.login').click(); //Inserir e-mail random\ncy.get('input[name=\"email_create\"]').type(chance.email());\ncy.get('button[name=\"SubmitCreate\"]').click(); //Tela de cadastro\ncy.get('input[id=\"id_gender2\"]').check();\ncy.get('input[id=\"customer_firstname\"]').type(chance.first());\ncy.get('input[id=\"customer_lastname\"]').type(chance.last());\ncy.get('input[id=\"passwd\"]').type(\"123456\");\ncy.get('select[id=\"days\"]').select('14');\ncy.get('select[id=\"months\"]').select('3');\ncy.get('select[id=\"years\"]').select('2020');\ncy.get('input[id=\"newsletter\"]').check();\ncy.get('input[id=\"company\"]').type(chance.company());\ncy.get('input[id=\"address1\"]').type(chance.address());\ncy.get('input[id=\"address2\"]').type(chance.d100());\ncy.get('input[id=\"city\"]').type(chance.city());\ncy.get('select[id=\"id_state\"]').select('Florida');\ncy.get('input[id=\"postcode\"]').type('00000');\ncy.get('input[id=\"phone_mobile\"]').type(chance.phone());\ncy.get('button[id=\"submitAccount\"]').click();\ncy.url().should('contain', 'my-account');",
+              "err": {},
+              "uuid": "d34afec3-879c-4a51-97bc-5aa855f7a04b",
+              "parentUUID": "05966f89-9046-4598-8bb0-07ba6bd827a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d34afec3-879c-4a51-97bc-5aa855f7a04b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17840,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "index",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "index"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
